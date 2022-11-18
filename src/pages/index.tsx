@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
-import { ProductLists } from './config';
-import { IProduct } from './types';
+import { ProductLists } from '../config';
+import { IProduct } from '../types';
 
 export default function Home() {
   return (
@@ -89,7 +89,7 @@ export default function Home() {
               className="products__title"
               data-aos="zoom-out"
             >
-              Let's Try Pop-It!
+              Let&apos;s Try Pop-It!
             </h2>
             <div className="products__lists">
               {ProductLists.map(
