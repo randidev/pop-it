@@ -61,13 +61,13 @@
 
   /* hero - start */
   .hero {
-    @apply bg-orange;
+    @apply bg-orange bg-hero--background bg-center bg-no-repeat;
   }
   .hero__container {
     @apply container--base;
   }
   .hero__content {
-    @apply flex min-h-[calc(100vh-60px)] items-center justify-between bg-hero--background;
+    @apply flex min-h-[calc(100vh-60px)] items-center justify-between;
   }
   .hero__content--items {
     @apply text-center lg:flex-[0_0_50%] lg:text-left;
