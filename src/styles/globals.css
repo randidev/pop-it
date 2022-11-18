@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .container--base {
+    @apply mx-auto max-w-[calc(100%-3rem)] md:max-w-[calc(100%-4rem)] xl:max-w-[calc(100%-5rem)] 2xl:max-w-[calc(100%-10rem)];
+  }
+
+  .title--base {
+    @apply text-2xl font-bold;
+  }
+  .title--large {
+    @apply text-3xl font-semibold;
+  }
+  .title--xl {
+    @apply text-7xl font-bold;
+  }
+
+  .description--base {
+    @apply mt-4 text-base font-normal;
+  }
+
+  .button {
+    @apply px-12 py-3 text-center text-base font-semibold;
+  }
+}
+
+@layer components {
+  /* header - start */
+  .header {
+    @apply relative bg-orange py-3;
+  }
+  .header__container {
+    @apply container--base;
+  }
+  .header__content {
+    @apply flex items-center justify-between;
+  }
+  .header__logo-text {
+    @apply title--large text-black;
+  }
+  .header__burger-menu {
+    @apply sm:hidden;
+  }
+  .navbar {
+    @apply absolute left-0 top-full translate-x-[-100%] overflow-hidden transition-all duration-200 ease-in-out sm:relative sm:bottom-0 sm:h-min sm:translate-x-0;
+  }
+  .navbar--open {
+    @apply w-full translate-x-0 transition-all duration-200 ease-in-out;
+  }
+  .navbar__link {
+    @apply text-base font-semibold text-black;
+  }
+  .navbar__nav {
+    @apply flex h-[calc(100vh-60px)] flex-col gap-[50px] border-b-[1px] border-b-slate-400 bg-white py-6 px-6 sm:h-auto sm:flex-row sm:items-center sm:border-none sm:bg-inherit sm:py-0 sm:px-0;
+  }
+  /* header - end */
+
+  /* hero - start */
+  .hero {
+    @apply bg-orange;
+  }
+  .hero__container {
+    @apply container--base;
+  }
+  .hero__content {
+    @apply flex min-h-[calc(100vh-60px)] items-center justify-between bg-hero--background;
+  }
+  .hero__content--items {
+    @apply text-center lg:flex-[0_0_50%] lg:text-left;
+  }
+  .hero__title {
+    @apply title--xl text-white;
+  }
+  .hero__subtitle {
+    @apply mt-4 w-full text-2xl font-semibold text-white md:mx-auto md:w-3/4 lg:w-full;
+  }
+  .hero__button {
+    @apply button mt-16 bg-green;
+  }
+  /* hero - end */
+
+  /* about us - start */
+  .about-us {
+  }
+  .about-us__container {
+    @apply container--base;
+  }
+  .about-us__content {
+    @apply py-12;
+  }
+  .about-us__title {
+    @apply text-center text-2xl font-bold text-black;
+  }
+  .about-us__description {
+    @apply description--base w-full text-center text-black md:mx-auto md:w-3/4 lg:w-3/4;
+  }
+  /* about us - end */
+
+  /* products - start */
+  .products {
+    @apply bg-green;
+  }
+  .products__container {
+    @apply container--base;
+  }
+  .products__content {
+    @apply py-32;
+  }
+  .products__title {
+    @apply title--base text-center text-black;
+  }
+  .products__lists {
+    @apply mx-auto mt-10 flex flex-nowrap items-start justify-between overflow-x-auto overflow-y-hidden whitespace-nowrap md:w-3/4 md:flex-wrap md:whitespace-normal;
+  }
+  .products__lists__item {
+    @apply flex-[0_0_100%] text-center md:flex-auto;
+  }
+  .products__lists__item__title {
+    @apply mt-4 text-center text-base font-semibold text-black;
+  }
+  .products__lists__item__button {
+    @apply button mt-4 bg-orange;
+  }
+  /* products - end */
+
+  /* contact - start */
+  .contact {
+    @apply bg-contact--background bg-contain bg-center bg-no-repeat;
+  }
+  .contact__container {
+    @apply container--base;
+  }
+  .contact__content {
+    @apply py-28;
+  }
+  .contact__items {
+    @apply flex flex-col-reverse items-center justify-between gap-8 md:flex-row;
+  }
+  .contact__content__item:first-child {
+    @apply flex-[0_0_65%];
+  }
+  .contact__content__item__title {
+    @apply title--base text-center text-black md:text-left;
+  }
+  .contact__content__item__description {
+    @apply description--base text-center text-black md:text-left;
+  }
+  /* contact - end */
+
+  /* footer - start */
+  .footer {
+    @apply bg-gray;
+  }
+  .footer__container {
+    @apply container--base;
+  }
+  .footer__content {
+    @apply py-5;
+  }
+  .footer__navbar__nav {
+    @apply flex flex-col justify-between gap-7 md:flex-row;
+  }
+  .footer__navbar__nav__item {
+    @apply text-base text-white;
+  }
+  .footer__navbar__nav__item:first-child {
+    @apply font-semibold;
+  }
+  /* footer - end */
+}
+
+html,
+body {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue,
+    sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
